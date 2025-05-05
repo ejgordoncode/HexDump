@@ -1,0 +1,41 @@
+// Author: E.J. Gordon
+// Project: Simple Hexdump Program (Assignment 1)
+// Class: CS530
+
+// About Me
+//     Hello! I am a third-year Computer Science major. I used this assignment as a refresher in c and c++.
+//     It'd been two years since I last worked in it, so this review was very beneficial. 
+// Project Overview
+//     This is a simple hexdump program which reads text files and outputs information about the contents of
+//     the file in terms of addresses, hexadecimal values, and ASCII characters. It takes up to three arguments 
+//     in the command line:
+//         Format 1: ./xed <inputFile.txt>
+//              This is the default mode for program. It will process 16 bytes at a time. First, it will output 
+//              the address of the first byte in the group. Then it will output the hexadecimal values of every 2
+//              bytes, separated by one space each, so that there are 8 groups of 2 bytes. Lastly, it will convert
+//              the hexadecimal values into their ASCII character representation. If it encounters a non-printable 
+//              character, that character is represented as a '.' instead.
+//         Format 2: ./xed -b <inputFile.txt>
+//              The argument "-b" signals to the program that its output must be in binary format. It will
+//              process 6 bytes at a time. First, it will output the address of the first byte of the group.
+//              Then, it will process 6 bytes of text and output them as 8-digit binary numbers separated
+//              by one space each. Lastly, it will convert the binary values into their ASCII character representation.
+//              If it encounters a non-printable character, that character is represented as a '.' instead.
+// Compilation and Execution
+//      To compile this program, follow these steps on the Edoras remote server:
+//          1. make clean
+//          2. make
+//          3. ./xed <inputFile.txt> OR ./xed -b <inputFile.txt>
+//      Here is an example:
+//          echo "Hello, world!" > helloWorld.txt
+//          ./xed helloWorld.txt
+//              000000: 4865 6c6c 6f2c 2077 6f72 6c64 21  Hello, world!
+//          ./xed -b helloWorld.txt
+//              000000: 01001000 01100101 01101100 01101100 01101111 00101100  Hello,
+//              000006: 00100000 01110111 01101111 01110010 01101100 01100100   world
+//              00000c: 00100001  !
+// File Structure
+//      xed.cpp - Source code
+//      Makefile - Compilation file
+//      README - Documentation
+//      testfile.txt - Test file
