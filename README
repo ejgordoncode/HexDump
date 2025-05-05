@@ -4,15 +4,14 @@
 
 // About Me
 //     Hello! I am a third-year Computer Science major. I used this assignment as a refresher in c and c++.
-//     It'd been two years since I last worked in it, so this review was very beneficial. 
 // Project Overview
-//     This is a simple hexdump program which reads text files and outputs information about the contents of
+//     This is a simple hexdump program that reads text files and outputs information about the contents of
 //     the file in terms of addresses, hexadecimal values, and ASCII characters. It takes up to three arguments 
 //     in the command line:
 //         Format 1: ./xed <inputFile.txt>
-//              This is the default mode for program. It will process 16 bytes at a time. First, it will output 
+//              This is the default mode for the program. It will process 16 bytes at a time. First, it will output 
 //              the address of the first byte in the group. Then it will output the hexadecimal values of every 2
-//              bytes, separated by one space each, so that there are 8 groups of 2 bytes. Lastly, it will convert
+//              bytes, separated by one space each, so there are 8 groups of 2 bytes. Lastly, it will convert
 //              the hexadecimal values into their ASCII character representation. If it encounters a non-printable 
 //              character, that character is represented as a '.' instead.
 //         Format 2: ./xed -b <inputFile.txt>
@@ -22,7 +21,7 @@
 //              by one space each. Lastly, it will convert the binary values into their ASCII character representation.
 //              If it encounters a non-printable character, that character is represented as a '.' instead.
 // Compilation and Execution
-//      To compile this program, follow these steps on the Edoras remote server:
+//      To compile this program, follow these steps on the Edoras remote server: (or plain cmd line if not an SDSU student)
 //          1. make clean
 //          2. make
 //          3. ./xed <inputFile.txt> OR ./xed -b <inputFile.txt>
